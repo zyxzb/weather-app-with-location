@@ -1,0 +1,10 @@
+.map-container {
+    max-height: 230px;
+    width: 100%;
+    box-shadow: 10px -2px 20px 2px rgb(0 0 0 / 30%);
+
+    iframe {
+        border: none;
+        border-radius: 6px;
+    }
+}
