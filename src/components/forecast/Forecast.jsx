@@ -1,13 +1,10 @@
 import React from 'react';
 import { Accordion, AccordionItem, AccordionItemHeading, AccordionItemButton, AccordionItemPanel } from 'react-accessible-accordion';
 import { HiOutlineCalendarDays } from "react-icons/hi2";
+import { forecastDays } from 'data';
 import './Forecast.scss';
 
 const Forecast = ({forecast}) => {
-    const WEEK_DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-
-    const dayInAWeek = new Date().getDay();
-    const forecastDays = WEEK_DAYS.slice(dayInAWeek, WEEK_DAYS.length).concat(WEEK_DAYS.slice(0, dayInAWeek));
     return (
         <>  
             <div className='title'><label >Forecast</label><HiOutlineCalendarDays/></div>

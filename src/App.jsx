@@ -6,6 +6,7 @@ import { OPEN_WEATHER_API_URL, OW_API_KEY } from 'api';
 import Info from 'components/info/Info';
 import Map from 'components/map/Map';
 import './App.scss';
+import Chart from 'components/chart/Chart';
 
 const App = () => {
   const [currentWeather, setCurrentWeather] = useState(null);
@@ -35,11 +36,12 @@ const App = () => {
     <div className="container">
       <Search onSearchChange={handleOnSearchChange}/>
       {currentWeather ?
-       <div className='map-weather'>
+      <div className='map-weather'>
         <CurrentWeather currentWeather={currentWeather} />
         <Map latitude={latitude} longitude={longitude} /> 
-       </div>
-       : <Info error={error}/> }
+      </div>
+      : <Info error={error}/> }
+      {forecast !== null ? <Chart forecast={forecast}/> : null}
       {forecast && currentWeather && <Forecast forecast={forecast}/>}
     </div>
   );
