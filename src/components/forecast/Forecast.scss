@@ -1,10 +1,12 @@
 .title {
     display: flex;
     align-items: center;
+    color: var(--main-color);
 
     label {
         font-size: 28px;
         font-weight: 700;
+        margin: 10px;
     }
 
     svg {
@@ -15,7 +17,7 @@
 }
 
 .daily-item {
-    background-color: #f5f5f5;
+    background-color: var(--main-color);
     border-radius: 15px;
     height: 40px;
     margin: 5px;
@@ -30,7 +32,7 @@
     }
 
     .day {
-        color: #212121;
+        color: var(--text-color);
         flex: 1;
         font-weight: 600;
         margin-left: 16px;
@@ -40,12 +42,13 @@
         flex: 1;
         text-align: right;
         font-style: italic;
+        color: var(--text-color);
     }
 
     .min-max {
         width: 90px;
         text-align: right;
-        color: #757575;
+        color: var(--text-color);
     }
 }
 
@@ -63,11 +66,11 @@
 
         label {
             &:first-child {
-                color: #757575;
+                color: var(--shadow-color);
             }
 
             &:last-child {
-                color: #212121;
+                color: var(--main-color);
             }
         }
     }

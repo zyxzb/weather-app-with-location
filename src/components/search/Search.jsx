@@ -1,12 +1,11 @@
+import ToggleMode from 'components/toggleMode/ToggleMode';
 import React, {useState} from 'react';
 import {AsyncPaginate} from 'react-select-async-paginate';
 import {GEO_API_URL, geoApiOptions} from '../../api';
-// import { BsSun, BsMoonStars } from "react-icons/bs";
 import './Search.scss';
 
 const Search = ({onSearchChange}) => {
     const [searched, setSearched] = useState(null);
-    // const [isNightMode, setIsNightMode] = useState(false);
 
     const handleOnChange = (searchedData) => {
         setSearched(searchedData);
@@ -29,11 +28,6 @@ const Search = ({onSearchChange}) => {
             })
             .catch(err => console.error(err));
     }
-
-    // const changeMode = () => {
-    //     setIsNightMode( prevState => !prevState)
-    // }
-
     return (
         <div className='top-container'>
             <div className='search'>
@@ -44,10 +38,8 @@ const Search = ({onSearchChange}) => {
                 onChange={handleOnChange}
                 loadOptions={loadOptions}
                 />
-            </div>    
-            {/* <div className='mode' onClick={changeMode}>
-                {isNightMode ? <BsMoonStars/> : <BsSun/>}
-            </div> */}
+            </div>
+            <ToggleMode/>    
         </div>
         );
 }

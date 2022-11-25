@@ -43,7 +43,8 @@ const Chart = ({forecast}) => {
                     <Line
                         type="monotone"
                         dataKey="temperature"
-                        stroke="#333"
+                        stroke="#666"
+                        strokeWidth={2} 
                         activeDot={{
                         r: 8
                     }}/>

@@ -2,9 +2,9 @@
     width: 340px;
     min-width: 340px;
     border-radius: 6px;
-    box-shadow: 10px -2px 20px 2px rgb(0 0 0 / 30%);
-    color: #fff;
-    background-color: #333;
+    box-shadow: 10px -2px 20px 2px var(--shadow-color);
+    color: var(--text-color);
+    background-color: var(--main-color);
     padding: 0 20px 20px;
 
     @media (max-width: 768px) {
